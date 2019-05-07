@@ -5,8 +5,7 @@
   "description": "A simple gulp plugin for html files formatting.",
   "scripts": {
     "pretty": "prettier --write **/*.{js,json}",
-    "release": "standard-version",
-    "publish": "npm publish"
+    "release": "standard-version"
   },
   "keywords": [
     "gulp",
