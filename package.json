@@ -4,7 +4,7 @@
   "main": "index.js",
   "description": "A simple gulp plugin for html files formatting.",
   "scripts": {
-    "pretty": "prettier --write **/*.{js,json}",
+    "pretty": "prettier --write **/*.js",
     "release": "standard-version"
   },
   "keywords": [
@@ -20,7 +20,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,json}": [
+    "*.js": [
       "prettier --write",
       "git add"
     ]

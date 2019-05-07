@@ -8,3 +8,4 @@ yarn.lock
 .prettierrc.yml
 .gitignore
 .editorconfig
+CHANGELOG.md
