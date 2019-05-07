@@ -1,0 +1,51 @@
+{
+  "name": "gulp-format-html",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "A simple gulp plugin for html files formatting.",
+  "scripts": {
+    "pretty": "prettier --write **/*.{js,json}",
+    "release": "standard-version",
+    "publish": "npm publish"
+  },
+  "keywords": [
+    "gulp",
+    "html",
+    "format",
+    "beauty",
+    "pretty"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntnyq/gulp-format-html.git"
+  },
+  "homepage": "https://github.com/ntnyq/gulp-format-html",
+  "bugs": {
+    "url": "https://github.com/ntnyq/gulp-format-html/issues"
+  },
+  "author": {
+    "name": "ntnyq",
+    "email": "ntnyq13@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^2.2.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.0"
+  },
+  "dependencies": {
+    "js-beautify": "^1.10.0",
+    "through2": "^3.0.1"
+  }
+}

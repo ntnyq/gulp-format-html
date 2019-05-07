@@ -1,0 +1,10 @@
+# Basic
+.DS_Store
+node_modules
+*.log
+yarn.lock
+
+# Plugin
+.prettierrc.yml
+.gitignore
+.editorconfig
