@@ -9,3 +9,7 @@ yarn.lock
 .gitignore
 .editorconfig
 CHANGELOG.md
+gulpfile.js
+/dev
+/.vscode
+
