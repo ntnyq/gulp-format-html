@@ -86,16 +86,16 @@ __gulp-format-html__ options.
 | indent_with_tabs | Indent with tabs | Boolean | false |
 | eol | Character(s) to use as line terminators | String | '\\n' |
 | end_with_newline | End output with newline | Boolean | false |
-| preserve_newlines | Preserve existing line-breaks | Boolean | true | 
+| preserve_newlines | Preserve existing line-breaks | Boolean | true |
 | max_preserve_newlines | Maximum number of line-breaks to be preserved in one chunk | Number | 10 |
 | indent_inner_html | Indent \<head\> and \<body\> sections | Boolean | false |
 | brace_style |  | 'collapse-preserve-inline\|collapse\|expand\|end-expand\|none' | collapse |
-| indent_scripts | Indent \<script\> content | 'keep\|separate\|normal' | 'normal' | 
+| indent_scripts | Indent \<script\> content | 'keep\|separate\|normal' | 'normal' |
 | wrap_line_length | Maximum characters per line (0 disables) | Number | 250 |
 | wrap_attributes | Wrap attributes to new lines | 'auto\|force\|force-aligned\|force-expand-multiline\|aligned-multiple\|preserve\|preserve-aligned' | auto |
 | wrap_attributes_indent_size | Indent wrapped attributes to after N characters | Number | indent_size | inline | List of tags to be considered inline tags | Array | [] |
 | unformatted | List of tags that should not be reformatted | Array | inline |
-| content_unformatted | List of tags whose content should not be reformatted | Array | [pre] |
+| content_unformatted | List of tags whose content should not be reformatted | Array | ['pre', 'script'] |
 | extra_liners | List of tags that should have an extra newline before them | Array | [head,body,/html] |
 | indent_empty_lines | Keep indentation on empty lines | Boolean  | false |
 | editorconfig |  Use EditorConfig to set up the options | String\|false | false |
