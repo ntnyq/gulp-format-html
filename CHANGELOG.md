@@ -1,6 +1,16 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.0.0](https://github.com/ntnyq/gulp-format-html/compare/v0.0.5...v1.0.0) (2019-07-13)
+
+
+### Build System
+
+* **deps:** bump lodash from 4.17.11 to 4.17.14 ([1a5aca7](https://github.com/ntnyq/gulp-format-html/commit/1a5aca7))
+* bump dependencies version ([6b88e6b](https://github.com/ntnyq/gulp-format-html/commit/6b88e6b))
+
+
 
 ## [0.0.5](https://github.com/ntnyq/gulp-format-html/compare/v0.0.4...v0.0.5) (2019-06-05)
 
