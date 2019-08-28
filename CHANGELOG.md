@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/ntnyq/gulp-format-html/compare/v1.0.0...v1.1.0) (2019-08-28)
+
+
+### Features
+
+* bump deps version ([4adf894](https://github.com/ntnyq/gulp-format-html/commit/4adf894))
+
 ## [1.0.0](https://github.com/ntnyq/gulp-format-html/compare/v0.0.5...v1.0.0) (2019-07-13)
 
 
