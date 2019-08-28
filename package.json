@@ -2,7 +2,10 @@
   "name": "gulp-format-html",
   "version": "1.0.0",
   "main": "index.js",
-  "description": "A simple gulp plugin for html files formatting.",
+  "files": [
+    "index.js"
+  ],
+  "description": "A simple gulp plugin for html files formatting",
   "scripts": {
     "dev": "gulp dev",
     "pretty": "prettier --write **/*.js",
@@ -41,12 +44,12 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "husky": "^3.0.0",
-    "lint-staged": "^9.2.0",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.5",
     "prettier": "^1.18.2"
   },
   "dependencies": {
-    "js-beautify": "^1.10.0",
+    "js-beautify": "^1.10.2",
     "through2": "^3.0.1"
   }
 }
