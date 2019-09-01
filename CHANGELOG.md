@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/ntnyq/gulp-format-html/compare/v1.1.0...v1.1.1) (2019-09-01)
+
+
+### Bug Fixes
+
+* rule content_unformatted can not be custom ([3185a10](https://github.com/ntnyq/gulp-format-html/commit/3185a10))
+
 ## [1.1.0](https://github.com/ntnyq/gulp-format-html/compare/v1.0.0...v1.1.0) (2019-08-28)
 
 
