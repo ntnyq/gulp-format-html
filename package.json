@@ -8,8 +8,7 @@
   "description": "A simple gulp plugin for html files formatting",
   "scripts": {
     "dev": "gulp dev",
-    "pretty": "prettier --write **/*.js",
-    "release": "standard-version"
+    "pretty": "prettier --write **/*.js"
   },
   "keywords": [
     "gulp",
@@ -18,17 +17,6 @@
     "beauty",
     "pretty"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ntnyq/gulp-format-html.git"
@@ -44,8 +32,6 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "husky": "^3.0.4",
-    "lint-staged": "^9.2.5",
     "prettier": "^1.18.2"
   },
   "dependencies": {
