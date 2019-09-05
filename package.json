@@ -8,7 +8,8 @@
   "description": "A simple gulp plugin for html files formatting",
   "scripts": {
     "dev": "gulp dev",
-    "pretty": "prettier --write **/*.js"
+    "pretty": "prettier --write **/*.js",
+    "pub": "git push --follow-tags origin master && npm publish"
   },
   "keywords": [
     "gulp",
