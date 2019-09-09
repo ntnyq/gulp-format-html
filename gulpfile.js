@@ -9,6 +9,7 @@ function views() {
         end_with_newline: true,
         max_preserve_newlines: 1,
         indent_scripts: 'separate',
+        verbose: true,
       })
     )
     .pipe(gulp.dest('dist'))

@@ -10,13 +10,13 @@ const CONTENT_UNFORMATTED_DEFAULT = ['pre', 'textarea', 'script']
 const DEFAULT_OPTIONS = {
   indent_size: 2,
   inline: [],
-  content_unformatted: CONTENT_UNFORMATTED_DEFAULT
+  content_unformatted: CONTENT_UNFORMATTED_DEFAULT,
 }
 
-module.exports = function (options = {}) {
+module.exports = function(options = {}) {
   options = Object.assign({}, options, DEFAULT_OPTIONS)
 
-  return through.obj(function (file, enc, next) {
+  return through.obj(function(file, enc, next) {
     if (file.isNull()) return next(null, file)
 
     const beautify = (buf, _, cb) => {
