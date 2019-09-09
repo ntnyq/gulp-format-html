@@ -79,7 +79,14 @@ Output:
 
 __gulp-format-html__ is based on [js-beautify](https://github.com/beautify-web/js-beautify), Check it's [HTML options](https://github.com/beautify-web/js-beautify#css--html) for detail.
 
-## Related package
+### verbose
+
+- __type__ `boolean`
+- __default__ `false`
+
+Display name of file from stream that is being formatting
+
+## Related
 
 - [gulp-diffable-html](https://github.com/ntnyq/gulp-diffable-html) Zero config HTML formatter to make HTML more readable and to indent HTML tag text in a single newline.
 

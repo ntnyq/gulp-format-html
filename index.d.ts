@@ -3,9 +3,9 @@ import { Transform } from 'stream'
 /**
  * Returns a stream that compiles Vinyl files as HTML
  */
-declare function GulpFormatHTML (options: GulpFormatHTML.Options): Transform
+declare function GulpFormatHtml (options: GulpFormatHtml.Options): Transform;
 
-declare namespace GulpFormatHTML {
+declare namespace GulpFormatHtml {
   type TypeBraceStyle = 'collapse-preserve-inline' | 'collapse' | 'expand' | 'end-expand' | 'none'
 
   type TypeIndentScripts = 'keep' | 'separate' | 'normal'
@@ -42,8 +42,8 @@ declare namespace GulpFormatHTML {
     /**
      * Display name of file from stream that is being formatting.
      */
-    verbose: boolean;
+    verbose?: boolean;
   }
 }
 
-export = GulpFormatHTML
+export = GulpFormatHtml

@@ -5,12 +5,11 @@ const through = require('through2')
 const log = require('fancy-log')
 const beautifyHtml = require('js-beautify').html
 
-const PLUGIN_NAME = 'gulp_format_html'
-const CONTENT_UNFORMATTED_DEFAULT = ['pre', 'textarea', 'script']
+const PLUGIN_NAME = 'gulp-format-html'
 const DEFAULT_OPTIONS = {
   indent_size: 2,
   inline: [],
-  content_unformatted: CONTENT_UNFORMATTED_DEFAULT,
+  content_unformatted: ['pre', 'textarea', 'script'],
 }
 
 module.exports = function(options = {}) {
