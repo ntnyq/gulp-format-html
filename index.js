@@ -1,19 +1,55 @@
-var beautifyHtml = require('js-beautify').html
-var through2 = require('through2').obj
+'use strict'
 
-var CONTENT_UNFORMATTED_TAGS = ['pre', 'textarea', 'script']
+const PluginError = require('plugin-error')
+const through = require('through2')
+const log = require('fancy-log')
+const beautifyHtml = require('js-beautify').html
 
-module.exports = function(opts) {
-  opts = opts || {}
-  opts.indent_size = opts.indent_size || 2
-  opts.inline = opts.inline || []
-  opts.content_unformatted =
-    opts.content_unformatted || CONTENT_UNFORMATTED_TAGS
+const PLUGIN_NAME = 'gulp_format_html'
+const CONTENT_UNFORMATTED_DEFAULT = ['pre', 'textarea', 'script']
+const DEFAULT_OPTIONS = {
+  indent_size: 2,
+  inline: [],
+  content_unformatted: CONTENT_UNFORMATTED_DEFAULT
+}
 
-  return through2(function(file, enc, cb) {
-    if (file.isNull()) return cb(null, file)
+module.exports = function (options = {}) {
+  options = Object.assign({}, options, DEFAULT_OPTIONS)
 
-    file.contents = Buffer.from(beautifyHtml(file.contents.toString(), opts))
-    cb(null, file)
+  return through.obj(function (file, enc, next) {
+    if (file.isNull()) return next(null, file)
+
+    const beautify = (buf, _, cb) => {
+      try {
+        const contents = Buffer.from(beautifyHtml(buf.toString(), options))
+
+        if (next === cb) {
+          file.contents = contents
+          return cb(null, file)
+        }
+
+        cb(null, contents)
+        next(null, file)
+      } catch (err) {
+        const opts = Object.assign({}, options, { fileName: file.path })
+        const error = new PluginError(PLUGIN_NAME, err, opts)
+
+        if (next !== cb) {
+          return next(error)
+        }
+
+        cb(error)
+      }
+    }
+
+    if (file.isStream()) {
+      file.contents = file.contents.pipe(through(beautify))
+    } else {
+      if (options.verbose) {
+        log(`${PLUGIN_NAME} is formatting file:`, file.path)
+      }
+
+      beautify(file.contents, null, next)
+    }
   })
 }
