@@ -13,7 +13,7 @@ const DEFAULT_OPTIONS = {
 }
 
 module.exports = function(options = {}) {
-  options = Object.assign({}, options, DEFAULT_OPTIONS)
+  options = Object.assign({}, DEFAULT_OPTIONS, options)
 
   return through.obj(function(file, enc, next) {
     if (file.isNull()) return next(null, file)
