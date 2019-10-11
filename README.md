@@ -1,10 +1,8 @@
 # gulp-format-html
 
-:beer: A simple Gulp plugin for html files formatting.
+> __Migrated to [gulp-plugins](https://github.com/ntnyq/gulp-plugins)__
 
-[![NPM VERSION](https://img.shields.io/npm/v/gulp-format-html.svg)](https://www.npmjs.com/package/gulp-format-html)
-[![NPM DOWNLOADS](https://img.shields.io/npm/dm/gulp-format-html.svg)](https://www.npmjs.com/package/gulp-format-html)
-[![LICENSE](https://img.shields.io/github/license/ntnyq/gulp-format-html.svg)](https://github.com/ntnyq/gulp-format-html/blob/master/LICENSE)
+:beer: A simple Gulp plugin for html files formatting.
 
 ## Install
 
